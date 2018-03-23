@@ -4,33 +4,40 @@ import Player1 from "./Player1"
 import Player2 from "./Player2"
 import Dice from "./Dice"
 import ReactDOM from 'react-dom';
-
+import position from "./Position"
 
 class ColoredRect extends Component {
 
 state = {
   player1Pos:0,
   player2Pos:0,
-  currentPlayer: "player1"
+  currentPlayer: "player1",
+  positionObj: position
 
 }
 
 
 
 ChangeDiceValue = () =>{
-   let rand = Math.round(Math.random() * 6);
 
+   let rand = Math.floor(Math.random() * ((6 - 1) + 1) + 1);
+
+    let pos = 0
    if(this.state.currentPlayer === "player1"){
      let val = this.state.player1Pos + rand;
+     pos = this.state.positionObj[val]
      this.setState({
-       player1Pos: val,
-       currentPlayer: "player2"
+
+       currentPlayer: "player2",
+       player1Pos: pos
      })
    }else if (this.state.currentPlayer === "player2") {
      let val = this.state.player2Pos + rand;
+    pos = this.state.positionObj[val]
      this.setState({
-       player2Pos: val,
-       currentPlayer: "player1"
+
+       currentPlayer: "player1",
+           player2Pos: pos
      })
    }
 
@@ -50,8 +57,7 @@ setPlayersPos=(num)=>{
 
 
 render(){
-console.log(this.state.player1Pos)
-console.log(this.state.player2Pos)
+
 
 return (
 
@@ -78,7 +84,7 @@ return (
         <div className="board" id="88">88{this.setPlayersPos(88)}</div>
         <div className="board" id="89">89{this.setPlayersPos(89)}</div>
         <div className="board" id="90">90{this.setPlayersPos(90)}</div>
-        <div className="board" id="80">80{this.setPlayersPos(80)}</div>
+        <div className="board" id="80">80</div>
         <div className="board" id="79">79{this.setPlayersPos(79)}</div>
         <div className="board" id="78">78{this.setPlayersPos(78)}</div>
         <div className="board" id="77">77{this.setPlayersPos(77)}</div>
@@ -86,7 +92,7 @@ return (
         <div className="board" id="75">75{this.setPlayersPos(75)}</div>
         <div className="board" id="74">74{this.setPlayersPos(74)}</div>
         <div className="board" id="73">73{this.setPlayersPos(73)}</div>
-        <div className="board" id="72">72{this.setPlayersPos(72)}</div>
+        <div className="board" id="72">72</div>
         <div className="board" id="71">71{this.setPlayersPos(71)}</div>
         <div className="board" id="61">61{this.setPlayersPos(61)}</div>
         <div className="board" id="62">62{this.setPlayersPos(62)}</div>
@@ -106,7 +112,7 @@ return (
         <div className="board" id="55">55{this.setPlayersPos(55)}</div>
         <div className="board" id="54">54{this.setPlayersPos(54)}</div>
         <div className="board" id="53">53{this.setPlayersPos(53)}</div>
-        <div className="board" id="52">52{this.setPlayersPos(52)}</div>
+        <div className="board" id="52">52</div>
         <div className="board" id="51">51{this.setPlayersPos(51)}</div>
         <div className="board" id="41">41{this.setPlayersPos(41)}</div>
         <div className="board" id="42">42{this.setPlayersPos(42)}</div>
@@ -128,18 +134,18 @@ return (
         <div className="board" id="33">33{this.setPlayersPos(33)}</div>
         <div className="board" id="32">32{this.setPlayersPos(32)}</div>
         <div className="board" id="31">31{this.setPlayersPos(31)}</div>
-        <div className="board" id="21">21{this.setPlayersPos(21)}</div>
+        <div className="board" id="21">21</div>
         <div className="board" id="22">22{this.setPlayersPos(22)}</div>
         <div className="board" id="23">23{this.setPlayersPos(23)}</div>
         <div className="board" id="24">24{this.setPlayersPos(24)}</div>
         <div className="board" id="25">25{this.setPlayersPos(25)}</div>
         <div className="board" id="26">26{this.setPlayersPos(26)}</div>
         <div className="board" id="27">27{this.setPlayersPos(27)}</div>
-        <div className="board" id="28">28{this.setPlayersPos(28)}</div>
+        <div className="board" id="28">28</div>
         <div className="board" id="29">29{this.setPlayersPos(29)}</div>
         <div className="board" id="30">30{this.setPlayersPos(30)}</div>
         <div className="board" id="20">20{this.setPlayersPos(20)}</div>
-        <div className="board" id="19">19{this.setPlayersPos(19)}</div>
+        <div className="board" id="19">19</div>
         <div className="board" id="18">18{this.setPlayersPos(18)}</div>
         <div className="board" id="17">17{this.setPlayersPos(17)}</div>
         <div className="board" id="16">16{this.setPlayersPos(16)}</div>
@@ -153,10 +159,10 @@ return (
         <div className="board" id="3">3{this.setPlayersPos(3)}</div>
         <div className="board" id="4">4{this.setPlayersPos(4)}</div>
         <div className="board" id="5">5{this.setPlayersPos(5)}</div>
-        <div className="board" id="6">6{this.setPlayersPos(6)}</div>
+        <div className="board" id="6">6</div>
         <div className="board" id="7">7{this.setPlayersPos(7)}</div>
         <div className="board" id="8">8{this.setPlayersPos(8)}</div>
-        <div className="board" id="9">9{this.setPlayersPos(9)}</div>
+        <div className="board" id="9">9</div>
         <div className="board" id="10">10{this.setPlayersPos(10)}</div>
 
 

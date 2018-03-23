@@ -1,12 +1,14 @@
 import React, {Component} from "react";
-
+import "./snakes.css"
 
 const Dice = ( props ) =>{
 
 
   return(
     <div>
-    <button type="button" onClick={props.diceValue} >Click sdfsMe!</button>
+    <div>
+    <button  className="button"type="button" onClick={props.diceValue} ><h1>Clickmew</h1></button>
+    </div>
     </div>
   )
 }
