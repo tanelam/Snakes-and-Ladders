@@ -1,129 +1,167 @@
 import React, { Component } from "react"
 import "./snakes.css"
-
-
-
-
-
+import Player1 from "./Player1"
+import Player2 from "./Player2"
+import Dice from "./Dice"
+import ReactDOM from 'react-dom';
 
 
 class ColoredRect extends Component {
 
+state = {
+  player1Pos:0,
+  player2Pos:0,
+  currentPlayer: "player1"
 
-  onClickHandle=(e)=>{
-    console.log(e.target.innerText)
-  }
+}
+
+
+
+ChangeDiceValue = () =>{
+   let rand = Math.round(Math.random() * 6);
+
+   if(this.state.currentPlayer === "player1"){
+     let val = this.state.player1Pos + rand;
+     this.setState({
+       player1Pos: val,
+       currentPlayer: "player2"
+     })
+   }else if (this.state.currentPlayer === "player2") {
+     let val = this.state.player2Pos + rand;
+     this.setState({
+       player2Pos: val,
+       currentPlayer: "player1"
+     })
+   }
+
+}
+
+
+
+
+
+setPlayersPos=(num)=>{
+ if(this.state.player1Pos== num && this.state.player2Pos == num) return (<div><Player1/> <Player2/></div>)
+ if(this.state.player1Pos== num) return (<Player1/>)
+ if(this.state.player2Pos== num) return (<Player2/>)
+ return null
+}
+
+
 
 render(){
+console.log(this.state.player1Pos)
+console.log(this.state.player2Pos)
 
 return (
+
       <div>
       <div className="board-image"></div>
-      <div onClick={this.onClickHandle} className="board-wrap">
-        <div className="board">100</div>
-        <div className="board">99</div>
-
-        <div className="board" >98</div>
-        <div className="board">97</div>
-        <div className="board">96</div>
-        <div className="board">95</div>
-        <div className="board">94</div>
-        <div className="board">93</div>
-        <div className="board">92</div>
-        <div className="board">91</div>
-        <div className="board">81</div>
-        <div className="board">82</div>
-        <div className="board">83</div>
-        <div className="board">84</div>
-        <div className="board">85</div>
-        <div className="board">86</div>
-        <div className="board">87</div>
-        <div className="board">88</div>
-        <div className="board">89</div>
-        <div className="board">90</div>
-        <div className="board">80</div>
-        <div className="board">79</div>
-        <div className="board">78</div>
-        <div className="board">77</div>
-        <div className="board">76</div>
-        <div className="board">75</div>
-        <div className="board">74</div>
-        <div className="board">73</div>
-        <div className="board">72</div>
-        <div className="board">71</div>
-        <div className="board">61</div>
-        <div className="board">62</div>
-        <div className="board">63</div>
-        <div className="board">64</div>
-        <div className="board">65</div>
-        <div className="board">66</div>
-        <div className="board">67</div>
-        <div className="board">68</div>
-        <div className="board">69</div>
-        <div className="board">70</div>
-        <div className="board">60</div>
-        <div className="board">59</div>
-        <div className="board">58</div>
-        <div className="board">57</div>
-        <div className="board">56</div>
-        <div className="board">55</div>
-        <div className="board">54</div>
-        <div className="board">53</div>
-        <div className="board">52</div>
-        <div className="board">51</div>
-        <div className="board">41</div>
-        <div className="board">42</div>
-        <div className="board">43</div>
-        <div className="board">44</div>
-        <div className="board">45</div>
-        <div className="board">46</div>
-        <div className="board">47</div>
-        <div className="board">48</div>
-        <div className="board">49</div>
-        <div className="board">50</div>
-        <div className="board">40</div>
-        <div className="board">39</div>
-        <div className="board">38</div>
-        <div className="board">37</div>
-        <div className="board">36</div>
-        <div className="board">35</div>
-        <div className="board">34</div>
-        <div className="board">33</div>
-        <div className="board">32</div>
-        <div className="board">31</div>
-        <div className="board">21</div>
-        <div className="board">22</div>
-        <div className="board">23</div>
-        <div className="board">24</div>
-        <div className="board">25</div>
-        <div className="board">26</div>
-        <div className="board">27</div>
-        <div className="board">28</div>
-        <div className="board">29</div>
-        <div className="board">30</div>
-        <div className="board">20</div>
-        <div className="board">19</div>
-        <div className="board">18</div>
-        <div className="board">17</div>
-        <div className="board">16</div>
-        <div className="board">15</div>
-        <div className="board">14</div>
-        <div className="board">13</div>
-        <div className="board">12</div>
-        <div className="board">11</div>
-        <div className="board">1</div>
-        <div className="board">2</div>
-        <div className="board">3</div>
-        <div className="board">4</div>
-        <div className="board">5</div>
-        <div className="board">6</div>
-        <div className="board">7</div>
-        <div className="board">8</div>
-        <div className="board">9</div>
-        <div className="board">10</div>
+      <div  className="board-wrap">
+        <div  className="board" id="100">100{this.setPlayersPos(100)}</div>
+        <div className="board" id="99">99{this.setPlayersPos(99)}</div>
+        <div className="board" id="98">98{this.setPlayersPos(98)}</div>
+        <div className="board" id="97">97{this.setPlayersPos(97)}</div>
+        <div className="board"id="96">96{this.setPlayersPos(96)}</div>
+        <div className="board" id="95">95{this.setPlayersPos(95)}</div>
+        <div className="board" id="94">94{this.setPlayersPos(94)}</div>
+        <div className="board" id="93">93{this.setPlayersPos(93)}</div>
+        <div className="board" id="92">92{this.setPlayersPos(92)}</div>
+        <div className="board" id="91">91{this.setPlayersPos(91)}</div>
+        <div className="board" id="81">81{this.setPlayersPos(81)}</div>
+        <div className="board" id="82">82{this.setPlayersPos(82)}</div>
+        <div className="board" id="83">83{this.setPlayersPos(83)}</div>
+        <div className="board" id="84">84{this.setPlayersPos(84)}</div>
+        <div className="board" id="85">85{this.setPlayersPos(85)}</div>
+        <div className="board" id="86">86{this.setPlayersPos(86)}</div>
+        <div className="board" id="87">87{this.setPlayersPos(87)}</div>
+        <div className="board" id="88">88{this.setPlayersPos(88)}</div>
+        <div className="board" id="89">89{this.setPlayersPos(89)}</div>
+        <div className="board" id="90">90{this.setPlayersPos(90)}</div>
+        <div className="board" id="80">80{this.setPlayersPos(80)}</div>
+        <div className="board" id="79">79{this.setPlayersPos(79)}</div>
+        <div className="board" id="78">78{this.setPlayersPos(78)}</div>
+        <div className="board" id="77">77{this.setPlayersPos(77)}</div>
+        <div className="board" id="76">76{this.setPlayersPos(76)}</div>
+        <div className="board" id="75">75{this.setPlayersPos(75)}</div>
+        <div className="board" id="74">74{this.setPlayersPos(74)}</div>
+        <div className="board" id="73">73{this.setPlayersPos(73)}</div>
+        <div className="board" id="72">72{this.setPlayersPos(72)}</div>
+        <div className="board" id="71">71{this.setPlayersPos(71)}</div>
+        <div className="board" id="61">61{this.setPlayersPos(61)}</div>
+        <div className="board" id="62">62{this.setPlayersPos(62)}</div>
+        <div className="board" id="63">63{this.setPlayersPos(63)}</div>
+        <div className="board" id="64">64{this.setPlayersPos(64)}</div>
+        <div className="board" id="65">65{this.setPlayersPos(65)}</div>
+        <div className="board" id="66">66{this.setPlayersPos(66)}</div>
+        <div className="board" id="67">67{this.setPlayersPos(67)}</div>
+        <div className="board" id="68">68{this.setPlayersPos(68)}</div>
+        <div className="board" id="69">69{this.setPlayersPos(69)}</div>
+        <div className="board" id="70">70{this.setPlayersPos(70)}</div>
+        <div className="board" id="60">60{this.setPlayersPos(60)}</div>
+        <div className="board" id="59">59{this.setPlayersPos(59)}</div>
+        <div className="board" id="58">58{this.setPlayersPos(58)}</div>
+        <div className="board" id="57">57{this.setPlayersPos(57)}</div>
+        <div className="board" id="56">56{this.setPlayersPos(56)}</div>
+        <div className="board" id="55">55{this.setPlayersPos(55)}</div>
+        <div className="board" id="54">54{this.setPlayersPos(54)}</div>
+        <div className="board" id="53">53{this.setPlayersPos(53)}</div>
+        <div className="board" id="52">52{this.setPlayersPos(52)}</div>
+        <div className="board" id="51">51{this.setPlayersPos(51)}</div>
+        <div className="board" id="41">41{this.setPlayersPos(41)}</div>
+        <div className="board" id="42">42{this.setPlayersPos(42)}</div>
+        <div className="board" id="43">43{this.setPlayersPos(43)}</div>
+        <div className="board" id="44">44{this.setPlayersPos(44)}</div>
+        <div className="board" id="45">45{this.setPlayersPos(45)}</div>
+        <div className="board" id="46">46{this.setPlayersPos(46)}</div>
+        <div className="board" id="47">47{this.setPlayersPos(47)}</div>
+        <div className="board" id="48">48{this.setPlayersPos(48)}</div>
+        <div className="board" id="49">49{this.setPlayersPos(49)}</div>
+        <div className="board" id="50">50{this.setPlayersPos(50)}</div>
+        <div className="board" id="40">40{this.setPlayersPos(40)}</div>
+        <div className="board" id="39">39{this.setPlayersPos(39)}</div>
+        <div className="board" id="38">38{this.setPlayersPos(38)}</div>
+        <div className="board" id="37">37{this.setPlayersPos(37)}</div>
+        <div className="board" id="36">36{this.setPlayersPos(36)}</div>
+        <div className="board" id="35">35{this.setPlayersPos(35)}</div>
+        <div className="board" id="34">34{this.setPlayersPos(34)}</div>
+        <div className="board" id="33">33{this.setPlayersPos(33)}</div>
+        <div className="board" id="32">32{this.setPlayersPos(32)}</div>
+        <div className="board" id="31">31{this.setPlayersPos(31)}</div>
+        <div className="board" id="21">21{this.setPlayersPos(21)}</div>
+        <div className="board" id="22">22{this.setPlayersPos(22)}</div>
+        <div className="board" id="23">23{this.setPlayersPos(23)}</div>
+        <div className="board" id="24">24{this.setPlayersPos(24)}</div>
+        <div className="board" id="25">25{this.setPlayersPos(25)}</div>
+        <div className="board" id="26">26{this.setPlayersPos(26)}</div>
+        <div className="board" id="27">27{this.setPlayersPos(27)}</div>
+        <div className="board" id="28">28{this.setPlayersPos(28)}</div>
+        <div className="board" id="29">29{this.setPlayersPos(29)}</div>
+        <div className="board" id="30">30{this.setPlayersPos(30)}</div>
+        <div className="board" id="20">20{this.setPlayersPos(20)}</div>
+        <div className="board" id="19">19{this.setPlayersPos(19)}</div>
+        <div className="board" id="18">18{this.setPlayersPos(18)}</div>
+        <div className="board" id="17">17{this.setPlayersPos(17)}</div>
+        <div className="board" id="16">16{this.setPlayersPos(16)}</div>
+        <div className="board" id="15">15{this.setPlayersPos(15)}</div>
+        <div className="board" id="14">14{this.setPlayersPos(14)}</div>
+        <div className="board" id="13">13{this.setPlayersPos(13)}</div>
+        <div className="board" id="12">12{this.setPlayersPos(12)}</div>
+        <div className="board" id="11">11{this.setPlayersPos(11)}</div>
+        <div className="board" id="1">1{this.setPlayersPos(1)}</div>
+        <div className="board" id="2">2{this.setPlayersPos(2)}</div>
+        <div className="board" id="3">3{this.setPlayersPos(3)}</div>
+        <div className="board" id="4">4{this.setPlayersPos(4)}</div>
+        <div className="board" id="5">5{this.setPlayersPos(5)}</div>
+        <div className="board" id="6">6{this.setPlayersPos(6)}</div>
+        <div className="board" id="7">7{this.setPlayersPos(7)}</div>
+        <div className="board" id="8">8{this.setPlayersPos(8)}</div>
+        <div className="board" id="9">9{this.setPlayersPos(9)}</div>
+        <div className="board" id="10">10{this.setPlayersPos(10)}</div>
 
 
       </div>
+      < Dice diceValue={this.ChangeDiceValue}/>
       </div>
 )
 }

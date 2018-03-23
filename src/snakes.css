@@ -50,7 +50,7 @@
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
-  background-color: green;
+  background-color: red;
   border: 1px solid darkgreen;
 }
 .player-2 {
@@ -58,5 +58,6 @@
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
+  background-color: blue;
   border: 1px solid yellow;
 }
