@@ -12,8 +12,9 @@ state = {
   player1Pos:0,
   player2Pos:0,
   currentPlayer: "player1",
-  positionObj: position
-
+  positionObj: position,
+  diceValue: null,
+  flag: false
 }
 
 
@@ -24,24 +25,38 @@ ChangeDiceValue = () =>{
 
     let pos = 0
    if(this.state.currentPlayer === "player1"){
-     let val = this.state.player1Pos + rand;
-     pos = this.state.positionObj[val]
-     this.setState({
 
+     let val = this.state.player1Pos + rand;
+     if(val >100){
+
+       this.setState({
+         flag: true
+       })
+     }else{pos = this.state.positionObj[val]
+     this.setState({
+       diceValue: rand,
        currentPlayer: "player2",
        player1Pos: pos
-     })
+     })}
+
    }else if (this.state.currentPlayer === "player2") {
      let val = this.state.player2Pos + rand;
-    pos = this.state.positionObj[val]
-     this.setState({
+     if(val >100){
 
+       this.setState({
+         flag: true
+       })
+     }else{pos = this.state.positionObj[val]
+     this.setState({
+       diceValue: rand,
        currentPlayer: "player1",
-           player2Pos: pos
-     })
+       player2Pos: pos
+     })}
+
    }
 
 }
+
 
 
 
@@ -168,6 +183,7 @@ return (
 
       </div>
       < Dice diceValue={this.ChangeDiceValue}/>
+      
       </div>
 )
 }
