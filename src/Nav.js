@@ -11,6 +11,7 @@ class NavBar extends Component {
       <li><NavLink to="/game" activeClassName="active">Game</NavLink>  </li>
       <li> <NavLink to="/playerstats" activeClassName="active">Player Stats</NavLink> </li>
       <li> <NavLink to="/login" activeClassName="active">Login</NavLink> </li>
+      <li> <NavLink to="/conversationslist" activeClassName="active">Messages</NavLink> </li>
       </ul>
       </div>
     )

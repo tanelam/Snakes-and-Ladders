@@ -7,13 +7,14 @@ import { Route } from "react-router-dom"
 import { BrowserRouter as Router } from "react-router-dom"
 import PlayerStats from "./PlayerStats"
 import LoginForm from "./LoginForm"
-
+import ConversationsList from './ConversationsList';
 
 class App extends Component {
 
 state = {
-  player1:"",
-  player2:""
+  player1: "",
+  player2: "",
+  loggedIn: false
 }
 
 createUsers=(playerObj)=>{
@@ -54,7 +55,7 @@ createUsers=(playerObj)=>{
          <Route path="/game" component={ColoredRect}/>
          <Route path="/playerstats" component={PlayerStats}/>
          <Route path="/login" render={()=><LoginForm create={this.createUsers}/>}/>
-
+         <Route path="/conversationslist" component={ConversationsList}/>
 
       </div>
       </Router>
