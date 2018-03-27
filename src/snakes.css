@@ -50,26 +50,58 @@
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
-  background-color: red;
-  border: 1px solid darkgreen;
+  background-color:  #d64161;
+  border: 1px solid  #d64161;
 }
 .player-2 {
   height: 30px;
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
-  background-color: blue;
-  border: 1px solid yellow;
+  background-color: #4169e1;
+  border: 1px solid #4169e1;
 }
 .button {
-    background-color: #4CAF50;
-    border: none;
+    background-color: #034f84;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 50px;
     margin: 4px 2px;
     cursor: pointer;
+    box-shadow: 0 9px #999;
+    border-radius: 12px;
+    font-family: 'Chicle', cursive;
+}
+
+.button:hover {background-color: #36486b}
+
+
+.board-parent {
+    width: 1270px;
+    height: 1279px;
+    position: relative;
+}
+
+.flex-parent {
+    display: flex;
+    align-items: center;
+
+}
+
+.instructions-child{
+  background: rgba(255, 255, 249, 0.25);
+}
+
+h1 {
+  font-family: 'Chicle', cursive;
+  color:  #4040a1;
+  font-size: 80px
+}
+
+p{
+  font-family: 'Chicle', cursive;
+  color: #4040a1;
+  font-size: 60px
 }

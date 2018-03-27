@@ -6,12 +6,12 @@ class NavBar extends Component {
   render() {
     return (
       <div className="Nav">
-      <ul>
-      <li><NavLink to="/" activeClassName="active">Home</NavLink>  </li>
-      <li><NavLink to="/game" activeClassName="active">Game</NavLink>  </li>
-      <li> <NavLink to="/playerstats" activeClassName="active">Player Stats</NavLink> </li>
-      <li> <NavLink to="/login" activeClassName="active">Login</NavLink> </li>
-      </ul>
+        <ul>
+          <li><NavLink to="/instructions" activeClassName="active">Instructions</NavLink>  </li>
+          <li><NavLink to="/game" activeClassName="active">Game</NavLink>  </li>
+          <li> <NavLink to="/playerstats" activeClassName="active">Player Stats</NavLink> </li>
+          <li> <NavLink to="#" activeClassName="active">Players</NavLink> </li>
+        </ul>
       </div>
     )
   }
