@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import ColoredRect from "./ColoredRect"
 import NavBar from "./Nav"
@@ -10,13 +10,14 @@ import LoginPage from "./LoginPage"
 import Instructions from "./Instructions"
 import LoginContainer from './Login';
 import { Route, Redirect } from 'react-router-dom'
-
+import ConversationsList from './ConversationsList';
 
 class App extends Component {
 
 state = {
-  player1:"",
-  player2:""
+  player1: "",
+  player2: "",
+  loggedIn: false
 }
 
 setUser = (user) => {
@@ -49,9 +50,9 @@ setUser = (user) => {
         < NavBar/>
          <Route path="/game" component={ColoredRect}/>
          <Route path="/playerstats" component={PlayerStats}/>
-         <Route path="/players" render={()=><LoginPage create={this.createUsers}/>}/>
-         <Route path="/instructions" component={Instructions}/>
-
+          <Route path="/instructions" component={Instructions}/>
+         <Route path="/login" render={()=><LoginPage create={this.createUsers}/>}/>
+         <Route path="/conversationslist" component={ConversationsList}/>
 
       </div>
       </Router>
