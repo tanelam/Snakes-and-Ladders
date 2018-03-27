@@ -6,7 +6,7 @@ import Dice from "./Dice"
 import ReactDOM from 'react-dom';
 import position from "./Position"
 import swal from 'sweetalert2'
-
+import ShowDice from "./ShowDice"
 
 class ColoredRect extends Component {
 
@@ -113,6 +113,7 @@ return (
     <div class="flex-parent">
 
       < Dice diceValue={this.ChangeDiceValue}/>
+      < ShowDice diceValue={this.state.diceValue}/>
     <div className="board-parent">
       <div className="board-image"></div>
       <div  className="board-wrap">

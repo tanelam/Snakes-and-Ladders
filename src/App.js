@@ -20,7 +20,7 @@ state = {
   loggedIn: false
 }
 
-setUser = (user) => {
+getUser = (user) => {
    this.setState({currentUser: user})
  }
 
@@ -50,7 +50,7 @@ setUser = (user) => {
         < NavBar/>
          <Route path="/game" component={ColoredRect}/>
          <Route path="/playerstats" component={PlayerStats}/>
-          <Route path="/instructions" component={Instructions}/>
+         <Route path="/instructions" component={Instructions}/>
          <Route path="/login" render={()=><LoginPage create={this.createUsers}/>}/>
          <Route path="/conversationslist" component={ConversationsList}/>
 
