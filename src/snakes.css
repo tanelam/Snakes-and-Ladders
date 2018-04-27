@@ -23,9 +23,9 @@
   background-color: blue;
   display: inline-block;
 }
-.cell:nth-of-type(2n+1){
+/* .cell:nth-of-type(2n+1){
   background-color: white;
-}
+} */
 .board-wrap{
   position: absolute;
   font-size: 0;
@@ -128,3 +128,8 @@ p{
 }
 
 .button-new-game:hover {background-color: orange}
+
+.dice{
+  margin: 4px 2px;
+  padding: 15px 32px;
+}

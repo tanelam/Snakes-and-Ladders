@@ -24,10 +24,9 @@ class ShowDice extends Component {
 
     return(
 
-    <div>
+    <div className="dice">
       {checkValue()}
-
-  </div>
+    </div>
     )
   }
 }
