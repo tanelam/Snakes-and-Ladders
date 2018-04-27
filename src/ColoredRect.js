@@ -46,7 +46,7 @@ ChangeDiceValue = () =>{
 
    }else if (this.state.currentPlayer === "player2") {
      let val = this.state.player2Pos + rand;
-     if(val >100){
+     if(val > 100){
        this.setState({
          flag: true
        })
@@ -66,7 +66,7 @@ playerWon() {
   if (this.state.player1Pos === 100){
     swal({
       title: 'YOU WON!',
-      imageUrl: 'http://www.bbc.co.uk/staticarchive/a024345e15b0710df7373c529223b17e64ed8ed4.jpg',
+      imageUrl: require("./images/winning-cat1.png"),
       imageWidth: 400,
       imageHeight: 200,
       imageAlt: 'Custom image',
@@ -75,8 +75,8 @@ playerWon() {
   } else if (this.state.player2Pos === 100){
     swal({
       title: 'YOU WON!',
-      imageUrl: 'http://reaganpluscats.com/wp-content/uploads/2013/10/Current-Event-Cat-Nobel-Winner.png',
-      imageWidth: 400,
+      imageUrl: require("./images/winning-cat2.jpg"),
+      imageWidth: 200,
       imageHeight: 200,
       imageAlt: 'Custom image',
       animation: false
