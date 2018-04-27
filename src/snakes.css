@@ -51,8 +51,8 @@
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
-  background-color:  #d64161;
-  border: 1px solid  #d64161;
+  background-color:  red;
+  border: 1px solid red;
 }
 
 .player-2 {
@@ -60,8 +60,8 @@
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
-  background-color: #4169e1;
-  border: 1px solid #4169e1;
+  background-color: blue;
+  border: 1px solid blue;
 }
 
 .button {
