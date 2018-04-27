@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import position from "./Position"
 import swal from 'sweetalert2'
 import ShowDice from "./ShowDice"
+import NewGame from "./NewGame"
 
 class ColoredRect extends Component {
 
@@ -15,8 +16,7 @@ state = {
   player2Pos:0,
   currentPlayer: "player1",
   positionObj: position,
-  diceValue: null,
-  flag: false
+  diceValue: null
 }
 
 
@@ -33,8 +33,6 @@ ChangeDiceValue = () =>{
 
        this.setState({
          flag: true
-       },()=>{
-         this.alertToSend(val)
        })
 
      }else{pos = this.state.positionObj[val]
@@ -51,8 +49,6 @@ ChangeDiceValue = () =>{
      if(val >100){
        this.setState({
          flag: true
-       },()=>{
-         this.alertToSend(val)
        })
      }else{pos = this.state.positionObj[val]
      this.setState({
@@ -88,13 +84,17 @@ playerWon() {
   }
 }
 
-alertToSend(val) {
-  let wantedValue = val - 100;
-  alert(`You need less than ${wantedValue} to win.`)
+
+newGame = () => {
+  this.setState({
+    player1Pos:0,
+    player2Pos:0,
+    currentPlayer: "player1",
+    positionObj: position,
+    diceValue: null,
+    flag: false
+  })
 }
-
-
-
 
 setPlayersPos=(num)=>{
  if(this.state.player1Pos== num && this.state.player2Pos == num) return (<div><Player1/> <Player2/></div>)
@@ -110,10 +110,12 @@ render(){
 
 return (
 
-    <div class="flex-parent">
-
-      < Dice diceValue={this.ChangeDiceValue}/>
-      < ShowDice diceValue={this.state.diceValue}/>
+    <div className="flex-parent">
+      <div className="buttons">
+        < Dice diceValue={this.ChangeDiceValue}/>
+        < NewGame newGame={this.newGame}/>
+      </div>
+    < ShowDice diceValue={this.state.diceValue}/>
     <div className="board-parent">
       <div className="board-image"></div>
       <div  className="board-wrap">
@@ -217,10 +219,6 @@ return (
         <div className="board" id="8">8{this.setPlayersPos(8)}</div>
         <div className="board" id="9">9</div>
         <div className="board" id="10">10{this.setPlayersPos(10)}</div>
-
-
-
-
       </div>
     </div>
   </div>

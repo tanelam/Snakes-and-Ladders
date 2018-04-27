@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 .board-image{
-  background-image: url("https://s28.postimg.org/fuwjoqf59/snake_ladder_ludo_print_play_4440150.jpg");
+  background-image: url("./images/board.jpg");
   background-repeat: no-repeat;
   height: 1279px;
   width: 1368px;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 50;
   left:0;
 }
 .row{
@@ -27,7 +27,6 @@
   background-color: white;
 }
 .board-wrap{
-
   position: absolute;
   font-size: 0;
   margin: 78px;
@@ -35,6 +34,7 @@
   top: 0;
   left: 0;
 }
+
 .board{
   background-color: "red";
   opacity: 0.7;
@@ -45,6 +45,7 @@
   display: inline-block;
   font-size: 14px;
 }
+
 .player-1 {
   height: 30px;
   width: 30px;
@@ -53,6 +54,7 @@
   background-color:  #d64161;
   border: 1px solid  #d64161;
 }
+
 .player-2 {
   height: 30px;
   width: 30px;
@@ -61,6 +63,7 @@
   background-color: #4169e1;
   border: 1px solid #4169e1;
 }
+
 .button {
     background-color: #034f84;
     color: white;
@@ -75,7 +78,7 @@
     font-family: 'Chicle', cursive;
 }
 
-.button:hover {background-color: #36486b}
+.button:hover {background-color: green}
 
 
 .board-parent {
@@ -87,7 +90,10 @@
 .flex-parent {
     display: flex;
     align-items: center;
+}
 
+.buttons{
+flex-direction: column
 }
 
 .instructions-child{
@@ -105,3 +111,20 @@ p{
   color: #4040a1;
   font-size: 60px
 }
+
+.button-new-game {
+    background-color: purple;
+    display: block;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 50px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    border-radius: 12px;
+    font-family: 'Chicle', cursive;
+}
+
+.button-new-game:hover {background-color: orange}
