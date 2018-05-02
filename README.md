@@ -5,7 +5,7 @@
 * Snakes and Ladders Front End Repo - https://github.com/tanelam/Snakes-and-Ladders
 
 
-![alt text](https://github.com/tanelam/Snakes-and-Ladders/blob/master/screenshot.jpg)
+![alt text](https://github.com/tanelam/Snakes-and-Ladders/blob/master/screenshoot.jpg)
 
 ## Built With
 
