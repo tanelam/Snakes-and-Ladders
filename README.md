@@ -24,7 +24,7 @@
  
  * Click on "Game" so you can be redirected to the board game and start a new game.
  * Decide who is going to be the first player.
- * Click on the button that says "Roll the Dice", the white dice will tell you how many spaces your token is going to move.
+ * Click on the button that says "Roll the Dice".
  * If you hit a snake's head you will go down, but if you hit a ladder you will go up.
  * The first player that gets to 100 will win the game.
  
