@@ -12,7 +12,7 @@
 * JavaScript 
 * React
 
-## Setup
+# Setup
  1. Clone this repo https://github.com/tanelam/Snakes-and-Ladders
  2. Install Dependencies `npm install` or `yarn install`
  3. Start your server `npm start` or `yarn start`
