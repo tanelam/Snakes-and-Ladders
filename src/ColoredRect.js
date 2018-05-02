@@ -31,10 +31,6 @@ ChangeDiceValue = () =>{
      let val = this.state.player1Pos + rand;
      if(val >100){
 
-       this.setState({
-         flag: true
-       })
-
      }else{pos = this.state.positionObj[val]
      this.setState({
        diceValue: rand,
@@ -47,9 +43,6 @@ ChangeDiceValue = () =>{
    }else if (this.state.currentPlayer === "player2") {
      let val = this.state.player2Pos + rand;
      if(val > 100){
-       this.setState({
-         flag: true
-       })
      }else{pos = this.state.positionObj[val]
      this.setState({
        diceValue: rand,
@@ -113,7 +106,9 @@ return (
     <div className="flex-parent">
       <div className="buttons">
         < Dice diceValue={this.ChangeDiceValue}/>
+      <br/>
         < NewGame newGame={this.newGame}/>
+      <br/>
       </div>
     < ShowDice diceValue={this.state.diceValue}/>
     <div className="board-parent">
