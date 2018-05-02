@@ -2,9 +2,6 @@
 
 **Flatiron School Mod 4 final project. Snakes and Ladders is an interactive game of the classic board game.**
 
-* Snakes and Ladders Front End Repo - https://github.com/tanelam/Snakes-and-Ladders
-
-
 ![alt text](https://github.com/tanelam/Snakes-and-Ladders/blob/master/screenshoot.jpg)
 
 ## Built With
@@ -12,13 +9,13 @@
 * JavaScript 
 * React
 
-# Setup
+## Setup
  1. Clone this repo https://github.com/tanelam/Snakes-and-Ladders
  2. Install Dependencies `npm install` or `yarn install`
  3. Start your server `npm start` or `yarn start`
  4. Navigate to the web address of your server  http://localhost:3000 (or whatever yours is)
  
- # How to play:
+ ## How to play:
  
  ![Alt Text](https://media.giphy.com/media/dJHECxtJ3bObW0kx2y/giphy.gif)
  
