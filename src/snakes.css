@@ -92,20 +92,32 @@
 }
 
 .buttons{
-flex-direction: column
+  flex-direction: column
 }
 
 .instructions-child{
-  background: rgba(255, 255, 249, 0.25);
+  background: rgba(255, 255, 249, 0.35);
+  margin: auto;
+  width: 50%;
+}
+
+.home-child{
+  background: rgba(255, 255, 249, 0.35);
+  margin: auto;
+  width: 50%;
+}
+
+.title{
+  text-align: center;
 }
 
 h1 {
   font-family: 'Chicle', cursive;
-  color:  #4040a1;
+  color:  #d64161;
   font-size: 80px
 }
 
-p{
+p {
   font-family: 'Chicle', cursive;
   color: #4040a1;
   font-size: 60px
