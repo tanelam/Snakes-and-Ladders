@@ -1,5 +1,4 @@
-.button-roll-dice {
-  background-color: #034f84;
+.button {
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -12,29 +11,22 @@
   font-family: 'Chicle', cursive;
 }
 
-.button-roll-dice:hover {
+.button.new-game {
+  background-color: purple;
+}
+
+.button.roll-dice {
+  background-color: #034f84;
+}
+
+.button.roll-dice:hover {
   background-color: green
+}
+
+.button.new-game:hover {
+  background-color: orange
 }
 
 .buttons-positioning {
   flex-direction: column
-}
-
-.button-new-game {
-  background-color: purple;
-  display: block;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 50px;
-  margin: 4px 2px;
-  cursor: pointer;
-  box-shadow: 0 9px #999;
-  border-radius: 12px;
-  font-family: 'Chicle', cursive;
-}
-
-.button-new-game:hover {
-  background-color: orange
 }
