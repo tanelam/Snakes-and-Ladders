@@ -8,8 +8,9 @@
 
 ## Built With
 
-* JavaScript 
-* React
+* React 
+* JavaScript
+* CSS
 
 ## Setup
  1. Clone this repo https://github.com/tanelam/Snakes-and-Ladders
