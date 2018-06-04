@@ -1,17 +1,16 @@
-.player-1 {
+.player {
   height: 30px;
   width: 30px;
   margin: 0 20px;
   border-radius: 20px;
+}
+
+#one{
   background-color:  red;
   border: 1px solid red;
 }
 
-.player-2 {
-  height: 30px;
-  width: 30px;
-  margin: 0 20px;
-  border-radius: 20px;
+#two {
   background-color: blue;
   border: 1px solid blue;
 }

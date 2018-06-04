@@ -3,7 +3,7 @@ import "./css/players.css"
 
 const Player1 = () => {
   return (
-    <div className="player-1"></div>
+    <div className="player" id="one"></div>
   )
 }
 
