@@ -1,4 +1,4 @@
-div.Nav ul {
+.Nav ul {
   list-style-type:  none;
   margin: 0;
   padding: 0;
@@ -6,14 +6,14 @@ div.Nav ul {
   background-color: clear;
 }
 
-div.Nav li{
+.Nav li {
   float: right;
   font-size: 60px;
   font-family: 'Chicle', cursive;
 
 }
 
-div.Nav li a {
+.Nav li a {
   display: block;
   padding: 10px;
   color: white;

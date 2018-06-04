@@ -1,12 +1,10 @@
 import React, {Component} from "react"
+import "./css/buttons.css"
 
-import "./snakes.css"
-
-const NewGame = ( props ) =>{
-
+const NewGame = ( props ) => {
   return(
-    <div className="new-game" >
-        <button  className="button-new-game" type="button" onClick={props.newGame} > New Game </button>
+    <div>
+      <button  className="button-new-game" type="button" onClick={props.newGame} > New Game </button>
     </div>
   )
 }

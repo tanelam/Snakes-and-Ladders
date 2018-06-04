@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ColoredRect from "./ColoredRect"
+import Game from "./Game"
 import NavBar from "./Nav"
 import Instructions from "./Instructions"
 import Home from "./Home"
@@ -10,18 +10,15 @@ import { BrowserRouter as Router } from "react-router-dom"
 
 
 class App extends Component {
-
-
   render() {
-
     return (
       <Router>
-      <div className="App">
-        < NavBar/>
-      <Route exact path="/" component={Home}/>
-         <Route exact path="/game" component={ColoredRect}/>
+        <div className="App">
+         < NavBar/>
+         <Route exact path="/" component={Home}/>
+         <Route exact path="/game" component={Game}/>
          <Route exact path="/instructions" component={Instructions}/>
-      </div>
+        </div>
       </Router>
     );
   }

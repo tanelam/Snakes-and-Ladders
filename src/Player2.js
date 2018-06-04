@@ -1,19 +1,10 @@
 import React, {Component} from "react"
+import "./css/players.css"
 
-
-class Player2 extends Component {
-
-
-render(){
+const Player2 = () => {
   return (
-    <div className="player-2">
-    </div>
+    <div className="player-2"></div>
   )
-
 }
-
-}
-
-
 
 export default Player2

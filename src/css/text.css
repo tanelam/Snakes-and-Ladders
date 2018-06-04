@@ -1,0 +1,21 @@
+.text {
+  background: rgba(255, 255, 249, 0.35);
+  margin: auto;
+  width: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Chicle', cursive;
+  color:  #d64161;
+  font-size: 80px
+}
+
+p {
+  font-family: 'Chicle', cursive;
+  color: #4040a1;
+  font-size: 60px
+}
